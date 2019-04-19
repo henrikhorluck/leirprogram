@@ -6,7 +6,7 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'test', '--ci']
 # Build
-- name: 'CI=true gcr.io/cloud-builders/npm'
+- name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'build']
 # Deploy
 - name: 'gcr.io/leirprogram/firebase'
