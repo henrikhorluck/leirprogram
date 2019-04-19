@@ -3,8 +3,8 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
 # Test
-- name: 'CI=true gcr.io/cloud-builders/npm'
-  args: ['run', 'test', '--no-watch']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'test', '--ci']
 # Build
 - name: 'CI=true gcr.io/cloud-builders/npm'
   args: ['run', 'build']
