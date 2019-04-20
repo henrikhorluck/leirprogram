@@ -4,8 +4,11 @@ steps:
     args: ['install']
   # Test
   - name: 'gcr.io/cloud-builders/npm'
-    args: ['run', 'test']
+    args: ['test']
     env: ['CI=true']
- # Build
+  # Build
   - name: 'gcr.io/cloud-builders/npm'
     args: ['run', 'build']
+  # Deploy
+  - name: 'gcr.io/leirprogram/firebase'
+    args: ['deploy']
