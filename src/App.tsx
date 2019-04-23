@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import firebase from "firebase/app";
 
-class App extends Component {
-  render() {
-    return (
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAJ1b7ZHkkegzVZ0m0tynZXgTuakynFReQ",
+  authDomain: "leirprogram.firebaseapp.com",
+  databaseURL: "https://leirprogram.firebaseio.com",
+  projectId: "leirprogram",
+  storageBucket: "leirprogram.appspot.com",
+  messagingSenderId: "506598439556"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const App = () => (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -22,7 +33,5 @@ class App extends Component {
         </header>
       </div>
     );
-  }
-}
 
 export default App;
