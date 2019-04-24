@@ -1,7 +1,16 @@
 steps:
+  # Fetch origin/master
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['fetch']
+    env: ['CI=true']
+  # Merge with master
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['merge', 'master']
+    env: ['CI=true']
   # Install
   - name: 'gcr.io/cloud-builders/npm'
     args: ['install']
+    env: ['CI=true']
   # Test
   - name: 'gcr.io/cloud-builders/npm'
     args: ['run', 'test']
