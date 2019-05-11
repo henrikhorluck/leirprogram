@@ -4,11 +4,11 @@ steps:
     args: ['install']
   # Build CSS
   - name: 'gcr.io/cloud-builders/npm'
-    args: ['build:css']
+    args: ['run', 'build:css']
     env: ['CI=true']
   # Test
   - name: 'gcr.io/cloud-builders/npm'
-    args: ['test']
+    args: ['run', 'test']
     env: ['CI=true']
   # Build
   - name: 'gcr.io/cloud-builders/npm'
