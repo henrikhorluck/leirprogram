@@ -14,7 +14,7 @@ export const Header = () => {
     if (nav) {
       if (nav.style.left !== "0px") {
         nav.style.display = "block";
-        nav.style.left = "0";
+        nav.style.left = "0px";
       } else {
         nav.style.left = "100%";
         setTimeout(setDisplayNone, 500, nav);
