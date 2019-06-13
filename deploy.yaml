@@ -1,19 +1,19 @@
 steps:
   # Install
-  - name: 'gcr.io/cloud-builders/yarn'
-    args: ['install', '--pure-lockfile']
+  - name: "gcr.io/cloud-builders/yarn"
+    args: ["install", "--pure-lockfile"]
   # Build CSS
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['run', 'build:css']
-    env: ['CI=true']
+  - name: "gcr.io/cloud-builders/npm"
+    args: ["run", "build:css"]
+    env: ["CI=true"]
   # Test
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['run', 'test']
-    env: ['CI=true']
+  - name: "gcr.io/cloud-builders/npm"
+    args: ["run", "test"]
+    env: ["CI=true"]
   # Build
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['run', 'build']
-    env: ['CI=true']
+  - name: "gcr.io/cloud-builders/npm"
+    args: ["run", "build:js"]
+    env: ["CI=true"]
   # Deploy
-  - name: 'gcr.io/leirprogram/firebase'
-    args: ['deploy']
+  - name: "gcr.io/leirprogram/firebase"
+    args: ["deploy"]

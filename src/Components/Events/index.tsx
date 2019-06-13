@@ -1,7 +1,7 @@
-import { LoadingStripe } from "../Utils/LoadingStripe";
 import React, { FC, useEffect, useState } from "react";
 import { getEvents, leirEvent } from "../../Core/Api";
 import { Event } from "./EventSingle";
+import NavFrontendSpinner from "nav-frontend-spinner";
 
 export const EventList: FC = () => {
   const [events, setEvents] = useState<null | leirEvent[]>(null);
@@ -27,7 +27,7 @@ export const EventList: FC = () => {
           />
         ))
       ) : (
-        <LoadingStripe />
+        <NavFrontendSpinner />
       )}
     </>
   );
