@@ -11,3 +11,18 @@
 .ekspanderbartPanel__innhold > *:first-child {
   margin-top: 0;
 }
+
+.eventTitle {
+  display: grid;
+  grid-template: "title warning" ~"minmax(25px, 1fr) / 1fr" auto;
+  width: 92%;
+
+  > h2 {
+    grid-area: title;
+  }
+
+  > svg {
+    grid-area: warning;
+    height: 25px;
+  }
+}

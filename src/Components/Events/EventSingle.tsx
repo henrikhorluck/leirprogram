@@ -31,10 +31,10 @@ export const Event: FC<IEvent> = ({ title, description, warning }) =>
   description ? (
     <EkspanderbartpanelBase
       heading={
-        <>
+        <div className="eventTitle">
           <Undertittel>{title}</Undertittel>
           {warning && <Ikon kind={ikonKind("advarsel")} />}
-        </>
+        </div>
       }
       border
     >
