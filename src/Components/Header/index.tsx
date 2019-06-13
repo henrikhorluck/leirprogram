@@ -11,10 +11,8 @@ export const Header = () => {
     const nav = document.getElementById("navigation");
     if (nav) {
       if (nav.style.left !== "0px") {
-        nav.style.width = "100%";
         nav.style.left = "0";
       } else {
-        nav.style.width = "0";
         nav.style.left = "100%";
       }
     }
@@ -34,7 +32,7 @@ export const Header = () => {
           />
         </div>
       </header>
-      <Navigation />
+      <Navigation toggleNav={toggleNavigation}/>
     </>
   );
 };

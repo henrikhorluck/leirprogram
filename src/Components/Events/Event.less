@@ -1,5 +1,13 @@
 .ekspanderbartPanel,
 .panel {
-  margin: 0.5rem;
+  margin-top: 0.5rem;
   border-color: #78706a;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.ekspanderbartPanel__innhold > *:first-child {
+  margin-top: 0;
 }
