@@ -4,6 +4,8 @@ import "./Header.css";
 import NavFrontendChevron from "nav-frontend-chevron";
 import { Navigation } from "../Navigation";
 
+const setDisplayNone = (nav : HTMLElement) => nav.style.display = "none";
+
 export const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
@@ -11,9 +13,11 @@ export const Header = () => {
     const nav = document.getElementById("navigation");
     if (nav) {
       if (nav.style.left !== "0px") {
+        nav.style.display = "block";
         nav.style.left = "0";
       } else {
         nav.style.left = "100%";
+        setTimeout(setDisplayNone, 500, nav);
       }
     }
     setNavOpen(!navOpen);
