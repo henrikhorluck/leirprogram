@@ -15,3 +15,19 @@ export const getEvents = async () =>
     .catch(null)
     .then(res => res as leirEvent[])
     .catch(null);
+
+export type contact = {
+  id: number;
+  title: string;
+  name: string;
+  club: number;
+  phone: number;
+  mail: string;
+}
+
+export const getContacts = async () =>
+  await fetch(EVENTS_SOURCE_URL + '/contact', {})
+    .then(res => res.json())
+    .catch(null)
+    .then(res => res as contact[])
+    .catch(null);
