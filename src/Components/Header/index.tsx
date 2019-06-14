@@ -5,6 +5,8 @@ import { EkspanderbartpanelBase } from "nav-frontend-ekspanderbartpanel";
 import Lenkepanel from "nav-frontend-lenkepanel";
 
 import "./Header.css";
+import { routes } from "../../App";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
 
@@ -17,9 +19,9 @@ export const Header = () => {
         </div>
         } >
         <nav>
-          <Lenkepanel tittelProps="innholdstittel" href="/" border>Program</Lenkepanel>
-          <Lenkepanel tittelProps="innholdstittel" href="/kontakt" border>Kontakt</Lenkepanel>
-          <Lenkepanel tittelProps="innholdstittel" href="/sponsor" border>Sponsor</Lenkepanel>
+          <Lenkepanel tittelProps="innholdstittel" href="/" linkCreator={(props) => <Link to={routes.home} {...props as any} />} border>Program</Lenkepanel>
+          <Lenkepanel tittelProps="innholdstittel" href="/kontakt" linkCreator={(props) => <Link to={routes.contact} {...props as any} />} border>Kontakt</Lenkepanel>
+          <Lenkepanel tittelProps="innholdstittel" href="/sponsor" linkCreator={(props) => <Link to={routes.sponsor} {...props as any} />} border>Sponsor</Lenkepanel>
         </nav>
       </EkspanderbartpanelBase>
     </header>
