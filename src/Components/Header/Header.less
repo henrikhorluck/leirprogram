@@ -1,26 +1,26 @@
 .header {
-  background: #fff;
-  padding: 1rem;
   display: flex;
   justify-content: space-between;
 
   > img {
-    width: 44px;
-    height: 44px;
+    padding-right: 0.5rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+
+  & > *:first-child {
+    border-radius: 0;
   }
 
-  > div {
-    width: 44px;
-    height: 44px;
-    z-index: 3;
+}
 
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  .navigationChevron {
-    position: relative;
-    bottom: -0.7rem;
-  }
+nav > *:last-child {
+  margin-bottom: 0;
 }

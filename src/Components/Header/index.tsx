@@ -1,42 +1,27 @@
-import React, { useState } from "react";
-import { Sidetittel } from "nav-frontend-typografi";
-import "./Header.css";
-import NavFrontendChevron from "nav-frontend-chevron";
-import { Navigation } from "../Navigation";
+import React from "react";
 
-const setDisplayNone = (nav : HTMLElement) => nav.style.display = "none";
+import { Sidetittel } from "nav-frontend-typografi";
+import { EkspanderbartpanelBase } from "nav-frontend-ekspanderbartpanel";
+import Lenkepanel from "nav-frontend-lenkepanel";
+
+import "./Header.css";
 
 export const Header = () => {
-  const [navOpen, setNavOpen] = useState(false);
-
-  const toggleNavigation = () => {
-    const nav = document.getElementById("navigation");
-    if (nav) {
-      if (nav.style.left !== "0px") {
-        nav.style.display = "block";
-        nav.style.left = "0px";
-      } else {
-        nav.style.left = "100%";
-        setTimeout(setDisplayNone, 500, nav);
-      }
-    }
-    setNavOpen(!navOpen);
-  };
 
   return (
-    <>
-      <header className="header">
-        <img src="./android-chrome-192x192.png" alt="Fylkesleir log" />
-        <Sidetittel>Fylkesleir BTV</Sidetittel>
-        <div onClick={toggleNavigation}>
-          <NavFrontendChevron
-            stor
-            className="navigationChevron"
-            type={navOpen ? "høyre" : "venstre"}
-          />
+    <header>
+      <EkspanderbartpanelBase heading={
+        <div className="header">
+          <img src="./android-chrome-192x192.png" alt="Fylkesleir log" />
+          <Sidetittel>Fylkesleir BTV</Sidetittel>
         </div>
-      </header>
-      <Navigation toggleNav={toggleNavigation}/>
-    </>
+        } >
+        <nav>
+          <Lenkepanel tittelProps="innholdstittel" href="/" border>Program</Lenkepanel>
+          <Lenkepanel tittelProps="innholdstittel" href="/kontakt" border>Kontakt</Lenkepanel>
+          <Lenkepanel tittelProps="innholdstittel" href="/sponsor" border>Sponsor</Lenkepanel>
+        </nav>
+      </EkspanderbartpanelBase>
+    </header>
   );
 };
