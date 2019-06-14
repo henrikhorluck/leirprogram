@@ -18,8 +18,8 @@ export const Footer = () => (
     <div>
       <address>
         <p>
-          Leirprogram for 4H Buskerud sin fylkesleir 2019{"\n"}
-          Leirsjef: <Lenke href="tel:+47-902-62-220">902 62 220</Lenke>
+          Nettside for 4H Buskerud sin fylkesleir 2019{"\n"}
+          Tlf: <Lenke href="tel:+47-902-62-220">902 62 220</Lenke>
           {"\n"}
           E-post: <Lenke href="mailto: 4hbuskerud@4h.no">4hbuskerud@4h.no</Lenke>
         </p>
