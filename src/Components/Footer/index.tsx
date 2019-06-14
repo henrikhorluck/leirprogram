@@ -3,6 +3,7 @@ import facebook from "./facebook.png";
 import instagram from "./instagram.png";
 import "./Footer.css";
 import Lenke from "nav-frontend-lenker";
+import { CAMP_PHONE } from "../../Core/Constants";
 
 export const Footer = () => (
   <footer>
@@ -19,7 +20,7 @@ export const Footer = () => (
       <address>
         <p>
           Nettside for 4H Buskerud sin fylkesleir 2019{"\n"}
-          Tlf: <Lenke href="tel:+47-902-62-220">902 62 220</Lenke>
+          Tlf: <Lenke href={`tel:+47${CAMP_PHONE}`}>{CAMP_PHONE}</Lenke>
           {"\n"}
           E-post: <Lenke href="mailto: 4hbuskerud@4h.no">4hbuskerud@4h.no</Lenke>
         </p>
