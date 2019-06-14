@@ -14,15 +14,30 @@
 
 .eventTitle {
   display: grid;
-  grid-template: "title warning" ~"minmax(25px, 1fr) / 1fr" auto;
+  grid-template: ~"minmax(25px, 1fr) / auto 1fr" auto;
+  grid-gap: 0.5rem;
   width: 92%;
 
-  > h2 {
-    grid-area: title;
+  > .timeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 5ch;
+
+    > p:nth-child(2) {
+      border-top: 1px solid #78706A;
+    }
+
+    time::after {
+      content: "\A";
+      white-space: pre;
+    }
   }
 
-  > svg {
-    grid-area: warning;
-    height: 25px;
+
+  > .verticalMiddleContainer {
+    display: flex;
+    align-items: center;
   }
 }

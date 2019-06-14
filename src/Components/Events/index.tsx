@@ -22,6 +22,8 @@ export const EventList: FC = () => {
           <Event
             key={e.id}
             title={e.title}
+            startTime={e.startTime}
+            endTime={e.endTime}
             description={e.description}
             warning={e.warning}
           />
