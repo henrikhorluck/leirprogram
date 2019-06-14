@@ -7079,6 +7079,16 @@ nav-frontend-lenkepanel@^1.0.29:
   resolved "https://registry.yarnpkg.com/nav-frontend-lenkepanel/-/nav-frontend-lenkepanel-1.0.29.tgz#d812067a916fcd6b08224c93028a70bd13b0ef52"
   integrity sha512-xOZ/YHVTALpwbuFZ7uhV1rUJZA3nqtowHXZ1ITVMEZ6Qa/n1OGYMYM0Nw9fhqge6QU5QpBxFKaovi0kL6S4b6Q==
 
+nav-frontend-lenker-style@^0.2.20:
+  version "0.2.20"
+  resolved "https://registry.yarnpkg.com/nav-frontend-lenker-style/-/nav-frontend-lenker-style-0.2.20.tgz#2a79cc7014dc7286778b2b9fc55bac9fa254196c"
+  integrity sha512-0RGEhYsH/xACgARAyuV/OeLXE62fXc4v5bzfkQ0bP/dAOZl483aZV7NHGxwm1eiY/wT1RqcBBCjg/Y7S+G3nCQ==
+
+nav-frontend-lenker@^1.0.27:
+  version "1.0.27"
+  resolved "https://registry.yarnpkg.com/nav-frontend-lenker/-/nav-frontend-lenker-1.0.27.tgz#e16faad8164987411566e791207f801c53a35d4b"
+  integrity sha512-psWIkxAPkqOYbQJIKHGBIkZON089TTNcxerkr93f9+I7dX6G++Dqm0EO5ONZ4y7R6gCKbs8VqKvdj3pY90CJhQ==
+
 nav-frontend-paneler-style@^0.3.15:
   version "0.3.15"
   resolved "https://registry.yarnpkg.com/nav-frontend-paneler-style/-/nav-frontend-paneler-style-0.3.15.tgz#b9dee564e601c1d149fa4e3ba19e97aa3f9454c4"

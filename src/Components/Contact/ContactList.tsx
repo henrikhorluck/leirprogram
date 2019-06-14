@@ -1,6 +1,7 @@
 import React from "react";
 import { contact } from "../../Core/Api";
 import { Element, Normaltekst, Undertittel } from "nav-frontend-typografi";
+import Lenke from "nav-frontend-lenker";
 
 export interface IProps {
   contacts: contact[];
@@ -28,10 +29,10 @@ export const ContactList = ({ contacts }: IProps) => {
             <Element>{el.name}</Element>
             <Normaltekst>4H-klubb: {el.club}</Normaltekst>
             <Normaltekst>
-              Telefon: <a href={`tel:+47${el.phone}`}>{el.phone}</a>
+              Telefon: <Lenke href={`tel:+47${el.phone}`}>{el.phone}</Lenke>
             </Normaltekst>
             <Normaltekst>
-              E-post: <a href={`mailto: ${el.mail}`}>{el.mail}</a>
+              E-post: <Lenke href={`mailto: ${el.mail}`}>{el.mail}</Lenke>
             </Normaltekst>
           </div>
         ))}

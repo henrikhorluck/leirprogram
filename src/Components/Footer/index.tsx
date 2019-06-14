@@ -2,6 +2,7 @@ import React from "react";
 import facebook from "./facebook.png";
 import instagram from "./instagram.png";
 import "./Footer.css";
+import Lenke from "nav-frontend-lenker";
 
 export const Footer = () => (
   <footer>
@@ -18,9 +19,9 @@ export const Footer = () => (
       <address>
         <p>
           Leirprogram for 4H Buskerud sin fylkesleir 2019{"\n"}
-          Leirsjef: <a href="tel:+47-902-62-220">902 62 220</a>
+          Leirsjef: <Lenke href="tel:+47-902-62-220">902 62 220</Lenke>
           {"\n"}
-          E-post: <a href="mailto: 4hbuskerud@4h.no">4hbuskerud@4h.no</a>
+          E-post: <Lenke href="mailto: 4hbuskerud@4h.no">4hbuskerud@4h.no</Lenke>
         </p>
       </address>
       <div>
