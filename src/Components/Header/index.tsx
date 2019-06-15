@@ -2,11 +2,10 @@ import React from "react";
 
 import { Sidetittel } from "nav-frontend-typografi";
 import { EkspanderbartpanelBase } from "nav-frontend-ekspanderbartpanel";
-import Lenkepanel from "nav-frontend-lenkepanel";
 
-import "./Header.css";
 import { routes } from "../../App";
-import { Link } from "react-router-dom";
+import { LinkPanel } from "./LinkPanel";
+import "./Header.css";
 
 export const Header = () => {
 
@@ -19,9 +18,10 @@ export const Header = () => {
         </div>
         } >
         <nav>
-          <Lenkepanel tittelProps="innholdstittel" href="/" linkCreator={(props) => <Link to={routes.home} {...props as any} />} border>Program</Lenkepanel>
-          <Lenkepanel tittelProps="innholdstittel" href="/kontakt" linkCreator={(props) => <Link to={routes.contact} {...props as any} />} border>Kontakt</Lenkepanel>
-          <Lenkepanel tittelProps="innholdstittel" href="/sponsor" linkCreator={(props) => <Link to={routes.sponsor} {...props as any} />} border>Sponsor</Lenkepanel>
+          <LinkPanel href={routes.home} text="Hjem"/>
+          <LinkPanel href={routes.events} text="Program"/>
+          <LinkPanel href={routes.contact} text="Kontakt"/>
+          <LinkPanel href={routes.sponsor} text="Sponsor"/>
         </nav>
       </EkspanderbartpanelBase>
     </header>
