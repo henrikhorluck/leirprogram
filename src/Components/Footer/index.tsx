@@ -22,7 +22,8 @@ export const Footer = () => (
           Nettside for 4H Buskerud sin fylkesleir 2019{"\n"}
           Tlf: <Lenke href={`tel:+47${CAMP_PHONE}`}>{CAMP_PHONE}</Lenke>
           {"\n"}
-          E-post: <Lenke href="mailto: 4hbuskerud@4h.no">4hbuskerud@4h.no</Lenke>
+          E-post: <Lenke href="mailto: 4hbuskerud@4h.no">4hbuskerud@4h.no</Lenke>{"\n"}
+          Funnet en feil på nettsiden? <Lenke href="mailto: henrik@horluck.no">Send mail</Lenke>
         </p>
       </address>
       <div>
