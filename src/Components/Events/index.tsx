@@ -1,10 +1,10 @@
 import React, { FC, useEffect, useState } from "react";
-import { getEvents, leirEvent } from "../../Core/Api";
-import { Event } from "./EventSingle";
+import { getEvents, LeirEvent } from "Core/Api";
 import NavFrontendSpinner from "nav-frontend-spinner";
+import { EventList } from "./EventList";
 
-export const EventList: FC = () => {
-  const [events, setEvents] = useState<null | leirEvent[]>(null);
+export const Events: FC = () => {
+  const [events, setEvents] = useState<null | LeirEvent[]>(null);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -17,18 +17,7 @@ export const EventList: FC = () => {
 
   return (
     <>
-      {events ? (
-        events.map(e => (
-          <Event
-            key={e.id}
-            title={e.title}
-            startTime={e.startTime}
-            endTime={e.endTime}
-            description={e.description}
-            warning={e.warning}
-          />
-        ))
-      ) : (
+      {events ? <EventList events={events} /> : (
         <NavFrontendSpinner />
       )}
     </>

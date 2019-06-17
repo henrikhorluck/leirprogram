@@ -7,6 +7,7 @@ import Ikon, { icons } from "nav-frontend-ikoner-assets";
 import { Element, Undertittel } from "nav-frontend-typografi";
 import "./Event.css";
 import PanelBase from "nav-frontend-paneler";
+import { LeirEvent } from "../../Core/Api";
 
 const ikonKind = (type: AlertStripeType): icons => {
   const kindMap = {
@@ -21,31 +22,40 @@ const ikonKind = (type: AlertStripeType): icons => {
     .find(({ predicate }) => predicate)!.key as icons;
 };
 
-export interface IEvent {
-  title: string;
-  description: string;
-  startTime: string;
-  endTime: string;
-  warning?: string;
-}
-
-export const Event: FC<IEvent> = ({ title, description, warning, startTime, endTime }) => {
-  const startDate = new Date(startTime);
-  const endDate = new Date(endTime);
-
-  return (description || warning) ? (
+export const Event: FC<LeirEvent> = ({
+  id,
+  title,
+  description,
+  warning,
+  startTime,
+  endTime
+}) =>
+  description || warning ? (
     <EkspanderbartpanelBase
       heading={
-        <div className="eventTitle">
-          {(startTime || endTime) &&
-          <div className="timeContainer">
-            {startTime && <Element><time>{startDate.toLocaleTimeString().slice(0, -3)}</time></Element>}
-            {endTime && <Element><time>{endDate.toLocaleTimeString().slice(0, -3)}</time></Element>}
-          </div>}
+        <div className="eventTitle" id = {`${id}`}>
+          {(startTime || endTime) && (
+            <div className="timeContainer">
+              {startTime && (
+                <Element>
+                  <time>{startTime.toLocaleTimeString().slice(0, -3)}</time>
+                </Element>
+              )}
+              {endTime && (
+                <Element>
+                  <time>{endTime.toLocaleTimeString().slice(0, -3)}</time>
+                </Element>
+              )}
+            </div>
+          )}
           <div className="verticalMiddleContainer">
             <Undertittel>{title}</Undertittel>
           </div>
-          {warning && <div className="verticalMiddleContainer"><Ikon kind={ikonKind("advarsel")} /></div>}
+          {warning && (
+            <div className="verticalMiddleContainer">
+              <Ikon kind={ikonKind("advarsel")} />
+            </div>
+          )}
         </div>
       }
       border
@@ -56,15 +66,25 @@ export const Event: FC<IEvent> = ({ title, description, warning, startTime, endT
   ) : (
     <PanelBase border>
       <div className="eventTitle">
-        {(startTime || endTime) &&
-        <div className="timeContainer">
-          {startTime && <Element><time>{startDate.toLocaleTimeString('nb-NO').slice(0, -3)}</time></Element>}
-          {endTime && <Element><time>{endDate.toLocaleTimeString('nb-NO').slice(0, -3)}</time></Element>}
-        </div>}
+        {(startTime || endTime) && (
+          <div className="timeContainer">
+            {startTime && (
+              <Element>
+                <time>
+                  {startTime.toLocaleTimeString("nb-NO").slice(0, -3)}
+                </time>
+              </Element>
+            )}
+            {endTime && (
+              <Element>
+                <time>{endTime.toLocaleTimeString("nb-NO").slice(0, -3)}</time>
+              </Element>
+            )}
+          </div>
+        )}
         <div className="verticalMiddleContainer">
           <Undertittel>{title}</Undertittel>
         </div>
       </div>
     </PanelBase>
   );
-};
