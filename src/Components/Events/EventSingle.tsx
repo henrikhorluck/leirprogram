@@ -58,8 +58,8 @@ export const Event: FC<IEvent> = ({ title, description, warning, startTime, endT
       <div className="eventTitle">
         {(startTime || endTime) &&
         <div className="timeContainer">
-          {startTime && <Element><time>{startDate.toLocaleTimeString().slice(0, -3)}</time></Element>}
-          {endTime && <Element><time>{endDate.toLocaleTimeString().slice(0, -3)}</time></Element>}
+          {startTime && <Element><time>{startDate.toLocaleTimeString('nb-NO').slice(0, -3)}</time></Element>}
+          {endTime && <Element><time>{endDate.toLocaleTimeString('nb-NO').slice(0, -3)}</time></Element>}
         </div>}
         <div className="verticalMiddleContainer">
           <Undertittel>{title}</Undertittel>
