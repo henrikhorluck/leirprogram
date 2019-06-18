@@ -1,9 +1,13 @@
 import React from "react";
+
+import Lenke from "nav-frontend-lenker";
+
+import { CAMP_PHONE } from "Core/Constants";
+
 import facebook from "./facebook.png";
 import instagram from "./instagram.png";
+
 import "./Footer.css";
-import Lenke from "nav-frontend-lenker";
-import { CAMP_PHONE } from "../../Core/Constants";
 
 export const Footer = () => (
   <footer>

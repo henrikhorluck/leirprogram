@@ -1,13 +1,17 @@
 import React, { FC } from "react";
-import { EkspanderbartpanelBase } from "nav-frontend-ekspanderbartpanel";
 import Markdown from "react-markdown";
+
+import { EkspanderbartpanelBase } from "nav-frontend-ekspanderbartpanel";
 import AlertStripe, { AlertStripeType } from "nav-frontend-alertstriper";
-// @ts-ignore
-import Ikon, { icons } from "nav-frontend-ikoner-assets";
-import { Element, Undertittel } from "nav-frontend-typografi";
-import "./Event.css";
+import { Undertittel } from "nav-frontend-typografi";
 import PanelBase from "nav-frontend-paneler";
-import { LeirEvent } from "../../Core/Api";
+import Ikon, { icons } from "nav-frontend-ikoner-assets";
+
+import { RouterLink } from "../Utils";
+import { LeirEvent } from "Core/Api";
+import { TimeContainer } from "./TimeContainer";
+
+import "./Event.css";
 
 const ikonKind = (type: AlertStripeType): icons => {
   const kindMap = {
@@ -33,21 +37,8 @@ export const Event: FC<LeirEvent> = ({
   description || warning ? (
     <EkspanderbartpanelBase
       heading={
-        <div className="eventTitle" id = {`${id}`}>
-          {(startTime || endTime) && (
-            <div className="timeContainer">
-              {startTime && (
-                <Element>
-                  <time>{startTime.toLocaleTimeString("nb-NO").slice(0, -3)}</time>
-                </Element>
-              )}
-              {endTime && (
-                <Element>
-                  <time>{endTime.toLocaleTimeString("nb-NO").slice(0, -3)}</time>
-                </Element>
-              )}
-            </div>
-          )}
+        <div className="eventTitle" id={`${id}`}>
+          <TimeContainer startTime={startTime} endTime={endTime} />
           <div className="verticalMiddleContainer">
             <Undertittel>{title}</Undertittel>
           </div>
@@ -60,28 +51,13 @@ export const Event: FC<LeirEvent> = ({
       }
       border
     >
-      <Markdown source={description} />
+      <Markdown source={description} renderers={{link: RouterLink}} />
       {warning !== "" && <AlertStripe type="advarsel">{warning}</AlertStripe>}
     </EkspanderbartpanelBase>
   ) : (
     <PanelBase border>
       <div className="eventTitle">
-        {(startTime || endTime) && (
-          <div className="timeContainer">
-            {startTime && (
-              <Element>
-                <time>
-                  {startTime.toLocaleTimeString("nb-NO").slice(0, -3)}
-                </time>
-              </Element>
-            )}
-            {endTime && (
-              <Element>
-                <time>{endTime.toLocaleTimeString("nb-NO").slice(0, -3)}</time>
-              </Element>
-            )}
-          </div>
-        )}
+        <TimeContainer startTime={startTime} endTime={endTime} />
         <div className="verticalMiddleContainer">
           <Undertittel>{title}</Undertittel>
         </div>

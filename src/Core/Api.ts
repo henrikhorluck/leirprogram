@@ -25,17 +25,17 @@ export const getEvents = async () =>
     .then(res => res.json())
     .catch(null)
     .then((res: LeirEventRaw[]) =>
-      res.map(e => {
-        const {startTime, endTime} = e;
+      res.map(event => {
+        const { startTime, endTime } = event;
         const s = startTime.split(/[^0-9]/).map(el => parseInt(el));
-        const end = endTime.split(/[^0-9]/).map(el => parseInt(el));
+        const e = endTime.split(/[^0-9]/).map(el => parseInt(el));
         const startDate = new Date(s[0], s[1], s[2], s[3], s[4], s[5]);
-        const endDate = new Date(end[0], end[1], end[2], end[3], s[4], s[5]);
+        const endDate = new Date(e[0], e[1], e[2], e[3], e[4], e[5]);
 
         return {
-          ...e,
+          ...event,
           startTime: isValidDate(startDate) ? startDate : null,
-          endTime: isValidDate(endDate) ? endDate : null,
+          endTime: isValidDate(endDate) ? endDate : null
         } as LeirEvent;
       })
     )

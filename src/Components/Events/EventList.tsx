@@ -1,7 +1,8 @@
 import React, { FC } from "react";
-import { Event } from "./EventSingle";
+
 import { LeirEvent } from "Core/Api";
 import { DateDivider } from "./DateDivider";
+import { Event } from "./EventSingle";
 
 export interface IProps {
   events: LeirEvent[];
@@ -11,7 +12,12 @@ export const EventList: FC<IProps> = ({ events }) => {
   const list: JSX.Element[] = [];
   let previousEvent = events[0];
 
-  list.push(<DateDivider date={previousEvent.startTime} key={previousEvent.startTime.toString()}/>);
+  list.push(
+    <DateDivider
+      date={previousEvent.startTime}
+      key={previousEvent.startTime.toString()}
+    />
+  );
 
   for (const event of events) {
     const { id, title, startTime, endTime, description, warning } = event;
@@ -23,7 +29,9 @@ export const EventList: FC<IProps> = ({ events }) => {
       startTime.getHours() > 2 &&
       startTime.getHours() - previousEvent.startTime.getHours() > 3
     ) {
-      list.push(<DateDivider date={event.startTime} key={event.startTime.toString()}/>);
+      list.push(
+        <DateDivider date={event.startTime} key={event.startTime.toString()} />
+      );
     }
     list.push(
       <Event

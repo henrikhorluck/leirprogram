@@ -1,7 +1,9 @@
 import React from "react";
-import { contact } from "../../Core/Api";
+
 import { Element, Normaltekst, Undertittel } from "nav-frontend-typografi";
 import Lenke from "nav-frontend-lenker";
+
+import { contact } from "Core/Api";
 
 export interface IProps {
   contacts: contact[];

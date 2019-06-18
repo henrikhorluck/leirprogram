@@ -3,7 +3,7 @@ import React from 'react';
 import { Ingress, Sidetittel } from "nav-frontend-typografi";
 import Lenkepanel from "nav-frontend-lenkepanel/lib";
 import PanelBase from "nav-frontend-paneler";
-import { routes } from "../../App";
+import { routes } from "App";
 
 
 export const Home = () => <PanelBase>

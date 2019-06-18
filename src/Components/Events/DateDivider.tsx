@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+
 import { Undertekst } from "nav-frontend-typografi";
 
 export const DateDivider: FC<{ date: Date }> = ({ date }) => (

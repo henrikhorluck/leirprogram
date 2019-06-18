@@ -1,13 +1,13 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 
-import { useEffect, useState } from "react";
+import NavFrontendSpinner from "nav-frontend-spinner";
 import { Sidetittel, Undertittel } from "nav-frontend-typografi";
 import PanelBase from "nav-frontend-paneler";
-import { ContactList } from "./ContactList";
-import NavFrontendSpinner from "nav-frontend-spinner";
 import Lenke from "nav-frontend-lenker";
+
 import { contact, getContacts } from "Core/Api";
 import { CAMP_PHONE } from "Core/Constants";
+import { ContactList } from "./ContactList";
 
 import "./Contact.css";
 

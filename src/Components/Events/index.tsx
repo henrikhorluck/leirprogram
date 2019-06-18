@@ -1,6 +1,8 @@
 import React, { FC, useEffect, useState } from "react";
-import { getEvents, LeirEvent } from "Core/Api";
+
 import NavFrontendSpinner from "nav-frontend-spinner";
+
+import { getEvents, LeirEvent } from "Core/Api";
 import { EventList } from "./EventList";
 
 export const Events: FC = () => {
@@ -15,11 +17,5 @@ export const Events: FC = () => {
     fetchEvents();
   }, []);
 
-  return (
-    <>
-      {events ? <EventList events={events} /> : (
-        <NavFrontendSpinner />
-      )}
-    </>
-  );
+  return <>{events ? <EventList events={events} /> : <NavFrontendSpinner />}</>;
 };
