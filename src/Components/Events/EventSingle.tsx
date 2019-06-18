@@ -38,12 +38,12 @@ export const Event: FC<LeirEvent> = ({
             <div className="timeContainer">
               {startTime && (
                 <Element>
-                  <time>{startTime.toLocaleTimeString().slice(0, -3)}</time>
+                  <time>{startTime.toLocaleTimeString("nb-NO").slice(0, -3)}</time>
                 </Element>
               )}
               {endTime && (
                 <Element>
-                  <time>{endTime.toLocaleTimeString().slice(0, -3)}</time>
+                  <time>{endTime.toLocaleTimeString("nb-NO").slice(0, -3)}</time>
                 </Element>
               )}
             </div>
