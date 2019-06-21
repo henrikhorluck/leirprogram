@@ -14,7 +14,7 @@ export const Header = () => {
       <EkspanderbartpanelBase heading={
         <div className="header">
           <img src="./android-chrome-192x192.png" alt="Fylkesleir log" />
-          <Sidetittel>Fylkesleir BTV</Sidetittel>
+          <Sidetittel>4H-fylkesleir BTV</Sidetittel>
         </div>
         } >
         <nav>
