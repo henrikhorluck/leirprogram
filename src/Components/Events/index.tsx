@@ -4,6 +4,8 @@ import NavFrontendSpinner from "nav-frontend-spinner";
 
 import { getEvents, LeirEvent } from "Core/Api";
 import { EventList } from "./EventList";
+import { LinkPanel } from "../Header/LinkPanel";
+import { routes } from "App";
 
 export const Events: FC = () => {
   const [events, setEvents] = useState<null | LeirEvent[]>(null);
@@ -17,5 +19,14 @@ export const Events: FC = () => {
     fetchEvents();
   }, []);
 
-  return <>{events ? <EventList events={events} /> : <NavFrontendSpinner />}</>;
+  return (
+    <>
+      <LinkPanel
+        href={routes.openingHours}
+        text="Åpningstider"
+        className="programAapningstid"
+      />
+      {events ? <EventList events={events} /> : <NavFrontendSpinner />}
+    </>
+  );
 };

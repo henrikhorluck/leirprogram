@@ -51,7 +51,7 @@ export const Event: FC<LeirEvent> = ({
       }
       border
     >
-      <Markdown source={description} renderers={{link: RouterLink}} />
+      <Markdown source={description} renderers={{ link: RouterLink }} />
       {warning !== "" && <AlertStripe type="advarsel">{warning}</AlertStripe>}
     </EkspanderbartpanelBase>
   ) : (
