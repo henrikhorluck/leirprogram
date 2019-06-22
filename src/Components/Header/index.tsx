@@ -8,7 +8,7 @@ import { LinkPanel } from "./LinkPanel";
 import "./Header.css";
 
 export const Header: FC = () => {
-  const [aapen, setAapen] = useState(true);
+  const [aapen, setAapen] = useState(false);
 
   return (
     <header>
@@ -23,8 +23,7 @@ export const Header: FC = () => {
         }
       >
         <nav>
-          <div onClick={() =>
-            setAapen(!aapen)}>
+          <div onClick={() => setAapen(!aapen)}>
             <LinkPanel href={routes.home} text="Hjem" />
           </div>
           <div onClick={() => setAapen(!aapen)}>
