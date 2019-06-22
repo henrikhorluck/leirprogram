@@ -1,16 +1,20 @@
-import React from "react";
+import React, { FC, useState } from "react";
 
 import { Sidetittel } from "nav-frontend-typografi";
-import { EkspanderbartpanelBase } from "nav-frontend-ekspanderbartpanel";
+import { EkspanderbartpanelBasePure } from "nav-frontend-ekspanderbartpanel";
 
 import { routes } from "../../App";
 import { LinkPanel } from "./LinkPanel";
 import "./Header.css";
 
-export const Header = () => {
+export const Header: FC = () => {
+  const [aapen, setAapen] = useState(true);
+
   return (
     <header>
-      <EkspanderbartpanelBase
+      <EkspanderbartpanelBasePure
+        apen={aapen}
+        onClick={() => setAapen(!aapen)}
         heading={
           <div className="header">
             <img src="./android-chrome-192x192.png" alt="Fylkesleir log" />
@@ -19,12 +23,21 @@ export const Header = () => {
         }
       >
         <nav>
-          <LinkPanel href={routes.home} text="Hjem" />
-          <LinkPanel href={routes.events} text="Program" />
-          <LinkPanel href={routes.contact} text="Kontakt" />
-          <LinkPanel href={routes.sponsor} text="Sponsor" />
+          <div onClick={() =>
+            setAapen(!aapen)}>
+            <LinkPanel href={routes.home} text="Hjem" />
+          </div>
+          <div onClick={() => setAapen(!aapen)}>
+            <LinkPanel href={routes.events} text="Program" />
+          </div>
+          <div onClick={() => setAapen(!aapen)}>
+            <LinkPanel href={routes.contact} text="Kontakt" />
+          </div>
+          <div onClick={() => setAapen(!aapen)}>
+            <LinkPanel href={routes.sponsor} text="Sponsor" />
+          </div>
         </nav>
-      </EkspanderbartpanelBase>
+      </EkspanderbartpanelBasePure>
     </header>
   );
 };
