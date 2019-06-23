@@ -1,0 +1,24 @@
+.sponsor {
+  margin-bottom: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  > img {
+    height: 100px;
+    object-fit: contain;
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+
+    &[alt="Logoen til Flaget"] {
+      background: #333333;
+      padding: 0 1rem;
+      border-radius: 4px;
+    }
+  }
+}
