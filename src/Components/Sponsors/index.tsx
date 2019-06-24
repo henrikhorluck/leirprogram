@@ -11,7 +11,7 @@ import logo3 from './sponsors_logos/Steg Entreprenør.svg';
 import logo4 from './sponsors_logos/Drammen Travbane Drift.jpeg';
 import logo5 from './sponsors_logos/Aclima.png';
 import logo6 from './sponsors_logos/Stensby Entreprenør.jpg';
-import logo7 from './sponsors_logos/Varig Forsikring.jpg';
+import logo7 from './sponsors_logos/Gjensidige.png';
 import logo8 from './sponsors_logos/Modum Regnskapskontor.png';
 import logo9 from './sponsors_logos/Geir Bjertnæs.gif';
 import logo10 from './sponsors_logos/Account Regnskap.png';
@@ -23,7 +23,7 @@ const sponsors = {
   "Drammen Travbane Drift": logo4,
   "Aclima": logo5,
   "Stensby Entreprenør" : logo6,
-  "Varig Forsikring": logo7,
+  "Gjensidige / Varig forsikring": logo7,
   "Modum Regnskapskontor": logo8,
   "Geir Bjertnæs": logo9,
   "Account Regnskap": logo10
