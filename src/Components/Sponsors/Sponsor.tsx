@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import { Systemtittel } from "nav-frontend-typografi";
 import PanelBase from "nav-frontend-paneler";
 
 export interface IProps {
@@ -8,6 +7,5 @@ export interface IProps {
 }
 
 export const Sponsor:FC<IProps> = ({name, imgPath }) => <PanelBase border className="sponsor">
-    <img src={imgPath} alt={`Logoen til ${name}`} />
-    <Systemtittel>{name}</Systemtittel>
+    <img src={imgPath} alt={`${name}`} />
   </PanelBase>;
