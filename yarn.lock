@@ -7074,6 +7074,16 @@ nav-frontend-js-utils@^1.0.7:
   resolved "https://registry.yarnpkg.com/nav-frontend-js-utils/-/nav-frontend-js-utils-1.0.7.tgz#07ba8117561c1d7552041380e20e8d88e86afd55"
   integrity sha512-/XzbrFCfIou61E+fpeuyiKG5SVFd2EYUk96B9SfP8BZLwfRMjNdFieWpu0WP//5KbR9sMhpbqc2evzTnzXyrfQ==
 
+nav-frontend-knapper-style@^0.3.26:
+  version "0.3.26"
+  resolved "https://registry.yarnpkg.com/nav-frontend-knapper-style/-/nav-frontend-knapper-style-0.3.26.tgz#734f97052812af2f1c8460f334b4dd63fd414f0b"
+  integrity sha512-a0syl4T0LUI9Bq29Af9hYM/jazpSSoy2hp6SLMAS5H2Va+8j+/dpSFFqJ0Jc5hBclVOCMBNajMx6PxhK9LYDMw==
+
+nav-frontend-knapper@^1.0.30:
+  version "1.0.30"
+  resolved "https://registry.yarnpkg.com/nav-frontend-knapper/-/nav-frontend-knapper-1.0.30.tgz#aef99f5120fc1f2388ad5c98bc6d23ab62241c3d"
+  integrity sha512-d5ttmI/BjdX1FbhnAwWa1pZuV10xVtp1y5AZwMt0PXfxA/hPd0x9owcMXkGpnO4NXpUHwQqxWuS9t2XUwQ6seQ==
+
 nav-frontend-lenkepanel-style@^0.3.25:
   version "0.3.25"
   resolved "https://registry.yarnpkg.com/nav-frontend-lenkepanel-style/-/nav-frontend-lenkepanel-style-0.3.25.tgz#3ba87616b3529e35f5bddd33ca8a525ba399a050"
@@ -8855,10 +8865,10 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.4.tgz#90f336a68c3a29a096a3d648ab80e87ec61482a2"
   integrity sha512-PVadd+WaUDOAciICm/J1waJaSvgq+4rHE/K70j0PFqKhkTBsPv/82UGQJNXAngz1fOQLLxI6z1sEDmJDQhCTAA==
 
-react-markdown@^4.0.8:
-  version "4.0.9"
-  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-4.0.9.tgz#663ee66fdaeb5cfac1129e82ac8a5e04fc87092c"
-  integrity sha512-zhf/E7eJtCIFulFtxXsHq8wzjjBH8oewmwchtNxWG0so4sVCaPhF+8PjGYGsLobp/HUuevTcTFIscvU36V/d4w==
+react-markdown@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-4.1.0.tgz#7fdf840ecbabc803f28156f7411c726b58f25a73"
+  integrity sha512-EOHsEAN+aoP8UVz7vTHx6Z63GJfhrO9KItKlfsiBtVVS9tmSWtUaBTw73+2SObrWiOiE2Cs9qUBL7ORsvVhOrA==
   dependencies:
     html-to-react "^1.3.4"
     mdast-add-list-metadata "1.0.1"

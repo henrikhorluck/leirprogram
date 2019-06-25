@@ -6,11 +6,32 @@ import { Event } from "./EventSingle";
 
 export interface IProps {
   events: LeirEvent[];
+  includePrevious: boolean;
 }
 
-export const EventList: FC<IProps> = ({ events }) => {
+export const EventList: FC<IProps> = ({ events, includePrevious }) => {
+  let realEvents;
+  const now = new Date().valueOf();
+  if (
+    !includePrevious &&
+    now > events[0].startTime.valueOf() &&
+    now < events[-1].startTime.valueOf()
+  ) {
+    const index = events.findIndex((event, index, list) => {
+      const { startTime, endTime } = event;
+      if (startTime.valueOf() < now && (!endTime || endTime.valueOf() < now)) {
+        if (list.length > index && list[index + 1].startTime.valueOf() > now) {
+          return true;
+        }
+      }
+      return false;
+    });
+    realEvents = events.slice(index + 1);
+  } else {
+    realEvents = events;
+  }
   const list: JSX.Element[] = [];
-  let previousEvent = events[0];
+  let previousEvent = realEvents[0];
 
   list.push(
     <DateDivider
@@ -19,8 +40,8 @@ export const EventList: FC<IProps> = ({ events }) => {
     />
   );
 
-  for (const event of events) {
-    const { id, title, startTime, endTime, description, warning } = event;
+  for (const event of realEvents) {
+    const { id, startTime } = event;
 
     if (
       startTime !== null &&
@@ -33,17 +54,7 @@ export const EventList: FC<IProps> = ({ events }) => {
         <DateDivider date={event.startTime} key={event.startTime.toString()} />
       );
     }
-    list.push(
-      <Event
-        key={id}
-        id={id}
-        title={title}
-        startTime={startTime}
-        endTime={endTime}
-        description={description}
-        warning={warning}
-      />
-    );
+    list.push(<Event key={id} {...event} />);
     previousEvent = event;
   }
 
