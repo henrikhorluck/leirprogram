@@ -11,9 +11,7 @@ import Lenkepanel from "nav-frontend-lenkepanel/lib";
 
 export const Home = () => (
   <PanelBase>
-    <Sidetittel>
-      Velkommen til fylkesleir for Buskerud, Vestfold og Telemark 2019!
-    </Sidetittel>
+    <Sidetittel>Velkommen til fylkesleir!</Sidetittel>
     <Ingress>På denne siden vil det komme mye spennende info 🏗</Ingress>
     <br />
     <LinkPanel href={routes.events} text="Program" />

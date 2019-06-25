@@ -12,5 +12,7 @@ export const RouterLink: FC<IProps> = ({ href, children }) =>
   href.match(/^(https?:)?\/\//) ? (
     <Lenke href={href}>{children}</Lenke>
   ) : (
-    <Link to={href} className="lenke">{children}</Link>
+    <Link to={href} className="lenke">
+      {children}
+    </Link>
   );
