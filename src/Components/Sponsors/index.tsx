@@ -15,8 +15,16 @@ import logo7 from "./sponsors_logos/Gjensidige.png";
 import logo8 from "./sponsors_logos/Modum Regnskapskontor.png";
 import logo9 from "./sponsors_logos/Geir Bjertnæs.gif";
 import logo10 from "./sponsors_logos/Account Regnskap.png";
+import logo11 from "./sponsors_logos/Buskerud VGS.png";
+import logo12 from "./sponsors_logos/Modum Bad.png";
+import logo13 from "./sponsors_logos/Felleskjøpet.svg";
 
 const sponsors = [
+  {
+    name: "Buskerud Videregående Skole",
+    logo: logo11,
+    url: "http://www.buskerud.vgs.no/"
+  },
   { name: "Flaget", logo: logo1, url: "https://flagetas.no/" },
   {
     name: "Sparebank 1 Modum",
@@ -42,7 +50,13 @@ const sponsors = [
     name: "Account Regnskap",
     logo: logo10,
     url: "https://www.account-regnskap.no/"
-  }
+  },
+  {
+    name: "Modum Bad",
+    logo: logo12,
+    url: "https://www.modum-bad.no/"
+  },
+  { name: "Felleskjøpet", logo: logo13, url: "https://www.felleskjopet.no/" }
 ];
 
 export const Sponsors = () => (
