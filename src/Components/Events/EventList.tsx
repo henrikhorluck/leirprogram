@@ -15,7 +15,7 @@ export const EventList: FC<IProps> = ({ events, includePrevious }) => {
   if (
     !includePrevious &&
     now > events[0].startTime.valueOf() &&
-    now < events[-1].startTime.valueOf()
+    now < events[events.length-1].startTime.valueOf()
   ) {
     const index = events.findIndex((event, index, list) => {
       const { startTime, endTime } = event;
