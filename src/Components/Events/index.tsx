@@ -33,14 +33,15 @@ export const Events: FC = () => {
           <EventList includePrevious events={events} />
         ) : (
           <>
-            { (events.length >= 2 && new Date().valueOf() > events[1].startTime.valueOf()) && (
-              <Hovedknapp
-                id="showEarlierButton"
-                onClick={() => setIncludePrevious(!includePrevious)}
-              >
-                Vis tideligere poster
-              </Hovedknapp>
-            )}
+            {events.length >= 2 &&
+              new Date().valueOf() > events[1].startTime.valueOf() && (
+                <Hovedknapp
+                  id="showEarlierButton"
+                  onClick={() => setIncludePrevious(!includePrevious)}
+                >
+                  Vis tidligere poster
+                </Hovedknapp>
+              )}
             {<EventList includePrevious={includePrevious} events={events} />}
           </>
         )

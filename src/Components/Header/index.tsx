@@ -38,7 +38,6 @@ export const Header: FC = () => {
           <div onClick={() => setAapen(!aapen)}>
             <LinkPanel href={routes.sponsor} text="Sponsor" />
           </div>
-
         </nav>
       </EkspanderbartpanelBasePure>
     </header>

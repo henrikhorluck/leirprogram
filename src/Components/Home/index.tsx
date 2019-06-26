@@ -12,7 +12,10 @@ import Lenkepanel from "nav-frontend-lenkepanel/lib";
 export const Home = () => (
   <PanelBase>
     <Sidetittel>Velkommen til fylkesleir!</Sidetittel>
-    <Ingress>Her finner du all oppdatert informasjon du trenger for å få en knall 4H-leir.</Ingress>
+    <Ingress>
+      Her finner du all oppdatert informasjon du trenger for å få en knall
+      4H-leir.
+    </Ingress>
     <br />
     <LinkPanel href={routes.events} text="Program" />
     <Lenkepanel
@@ -23,6 +26,13 @@ export const Home = () => (
       Volleyball
     </Lenkepanel>
     <LinkPanel href={routes.openingHours} text="Åpningstider" />
+    <Lenkepanel
+      tittelProps="innholdstittel"
+      href="https://forms.office.com/Pages/ResponsePage.aspx?id=ZPM0C3839ECpVll_ACXeRi5XUJn6qWpKtUPCrCfGKKFUQTkyWVBJVFpPS1dWNUc1VU80MzA2UUMwSy4u"
+      border
+    >
+      Påmelding tautrekking
+    </Lenkepanel>
     <img className="h4logo" src={logo} alt="4H-kløveren" />
   </PanelBase>
 );

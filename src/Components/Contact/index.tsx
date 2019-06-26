@@ -26,10 +26,16 @@ export const ContactInfo: FC = () => {
   return (
     <PanelBase>
       <Sidetittel>Kontaktinfo</Sidetittel>
-      <Undertittel>Leirtelefon: <Lenke href={`tel:+47${CAMP_PHONE}`}>{CAMP_PHONE}</Lenke></Undertittel>
+      <Undertittel>
+        Leirtelefon: <Lenke href={`tel:+47${CAMP_PHONE}`}>{CAMP_PHONE}</Lenke>
+      </Undertittel>
       <br />
 
-      {contacts !== null ? ContactList({contacts: contacts || []}) : <NavFrontendSpinner />}
+      {contacts !== null ? (
+        ContactList({ contacts: contacts || [] })
+      ) : (
+        <NavFrontendSpinner />
+      )}
     </PanelBase>
-  )
+  );
 };
