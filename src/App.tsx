@@ -11,13 +11,15 @@ import { ContactInfo } from "./Components/Contact";
 import { Home } from "./Components/Home";
 import { Sponsors } from "./Components/Sponsors";
 import { OpeningHours } from "./Components/OpeningHours";
+import { CampRules } from "./Components/Camprules";
 
 export const routes = {
   home: "/",
   contact: "/kontakt",
   events: "/program",
   sponsor: "/sponsor",
-  openingHours: "/tider"
+  openingHours: "/tider",
+  camprules: "/leirregler"
 };
 
 const history = createBrowserHistory();
@@ -31,6 +33,7 @@ export const App: FC = () => (
         <Route path={routes.contact} component={ContactInfo} />
         <Route path={routes.sponsor} component={Sponsors} />
         <Route path={routes.openingHours} component={OpeningHours} />
+        <Route path={routes.camprules} component={CampRules} />
         <Route
           path="*"
           render={() => (

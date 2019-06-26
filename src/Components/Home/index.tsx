@@ -12,7 +12,7 @@ import Lenkepanel from "nav-frontend-lenkepanel/lib";
 export const Home = () => (
   <PanelBase>
     <Sidetittel>Velkommen til fylkesleir!</Sidetittel>
-    <Ingress>På denne siden vil det komme mye spennende info 🏗</Ingress>
+    <Ingress>Her finner du all oppdatert informasjon du trenger for å få en knall 4H-leir.</Ingress>
     <br />
     <LinkPanel href={routes.events} text="Program" />
     <Lenkepanel

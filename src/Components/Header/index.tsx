@@ -33,8 +33,12 @@ export const Header: FC = () => {
             <LinkPanel href={routes.contact} text="Kontakt" />
           </div>
           <div onClick={() => setAapen(!aapen)}>
+            <LinkPanel href={routes.camprules} text="Leirregler" />
+          </div>
+          <div onClick={() => setAapen(!aapen)}>
             <LinkPanel href={routes.sponsor} text="Sponsor" />
           </div>
+
         </nav>
       </EkspanderbartpanelBasePure>
     </header>
