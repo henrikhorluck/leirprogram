@@ -17,15 +17,18 @@ export const EventList: FC<IProps> = ({ events, includePrevious }) => {
     now > events[0].startTime.valueOf() &&
     now < events[events.length - 1].startTime.valueOf()
   ) {
-    const index = events.findIndex((event, index, list) => {
+    const index = events.findIndex((event, index) => {
       const { startTime, endTime } = event;
       if (startTime.valueOf() < now && (!endTime || endTime.valueOf() < now)) {
-        if (list.length > index && list[index + 1].startTime.valueOf() > now) {
+      console.log(events[index + 1].startTime.valueOf() > now);
+        if (events.length > index && events[index + 1].startTime.valueOf() > now) {
+          console.log(index);
           return true;
         }
       }
       return false;
     });
+    console.log(index);
     realEvents = events.slice(index + 1);
   } else {
     realEvents = events;

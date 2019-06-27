@@ -4,6 +4,7 @@ import { Route, Router, Switch } from "react-router";
 import { Sidetittel } from "nav-frontend-typografi";
 import PanelBase from "nav-frontend-paneler";
 import { createBrowserHistory } from "history";
+import * as Sentry from '@sentry/browser';
 
 import Core from "Core";
 import { Events } from "Components/Events";
@@ -12,6 +13,8 @@ import { Home } from "./Components/Home";
 import { Sponsors } from "./Components/Sponsors";
 import { OpeningHours } from "./Components/OpeningHours";
 import { CampRules } from "./Components/Camprules";
+
+Sentry.init({dsn: "https://a933c3feff5f440683cb3c9fdde4bc4b@sentry.io/1491537"});
 
 export const routes = {
   home: "/",
