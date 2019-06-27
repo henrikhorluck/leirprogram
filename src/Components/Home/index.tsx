@@ -33,6 +33,13 @@ export const Home = () => (
     >
       Påmelding tautrekking
     </Lenkepanel>
+    <Lenkepanel
+      tittelProps="innholdstittel"
+      href="https://forms.gle/ANWGXcCrXWehuUqJA"
+      border
+    >
+      Påmelding boblefotball
+    </Lenkepanel>
     <img className="h4logo" src={logo} alt="4H-kløveren" />
   </PanelBase>
 );
