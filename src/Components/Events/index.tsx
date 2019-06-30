@@ -34,7 +34,9 @@ export const Events: FC = () => {
         ) : (
           <>
             {events.length >= 2 &&
-              new Date().valueOf() > events[1].startTime.valueOf() && (
+              new Date().valueOf() > events[1].startTime.valueOf() &&
+              new Date().valueOf() <
+                events[events.length - 1].startTime.valueOf() && (
                 <Hovedknapp
                   id="showEarlierButton"
                   onClick={() => setIncludePrevious(!includePrevious)}
