@@ -1,5 +1,20 @@
 # Leirprogram
 
+<details>
+<summary><strong>Screenshot</strong></summary>
+
+![Screenshot of the homepage](docs/home_screenshot.png)
+
+</details>
+
+A static webpage made for the 4H Camp in Buskerud, Telemark and Vestfold 2019. 
+
+The backend is powered by a Google Sheet, fed to the frontend through a Google Cloud Function.
+
+Frontend is a simple react-app, utilizing [NAV Design](https://design.nav.no) and is hosted on Firebase Hosting,
+
+I have set up a simple CI/CD pipeline using Cloudbuild, which builds and runs tests for new commits, and deploys from master. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
