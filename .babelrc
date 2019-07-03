@@ -1,0 +1,12 @@
+{
+  "presets": ["next/babel", "@zeit/next-typescript/babel"],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "node_modules",
+        "style": true
+      }
+    ]
+  ]
+}
